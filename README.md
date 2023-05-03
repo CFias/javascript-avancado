@@ -1,2 +1,0 @@
-# javascriptavancado
- Avançados
