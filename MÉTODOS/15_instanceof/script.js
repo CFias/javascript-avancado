@@ -29,3 +29,6 @@ console.log(fordKa);
 
 fordKa.ligarVeiculo();
 
+console.log(new Carro instanceof Veiculo);
+console.log(fordKa instanceof Veiculo);
+console.log(fordKa instanceof Carro);
