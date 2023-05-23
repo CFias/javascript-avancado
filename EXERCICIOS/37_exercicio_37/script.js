@@ -70,3 +70,51 @@ console.log(carrinho);
 
 carrinho.removeItem({id:01, nome:"Camisa", qtd:02, preco:20});
 console.log(carrinho);
+
+
+class Sacola {
+    constructor(itens, qtd, valorTotal) {
+        this.itens = itens;
+        this.qtd = qtd;
+        this.valorTotal = valorTotal;
+    }
+
+    addProduto(produto) {
+
+        let contador = 0;
+
+        for(let produtoSacola in this.itens) {
+            if(this.itens[produtoSacola].id == produto.id) {
+                this.itens[produtoSacola].qtd += produto.qtd;
+                contador = 1;
+            }
+        }
+
+        if(contador == 0) {
+            this.itens.push(produto);
+        }
+
+        this.qtd += produto.qtd;
+        this.valorTotal += produto.preco * produto.qtd;
+    }
+};
+
+let sacola = new Sacola ([
+    {
+        id:01,
+        produto:"Shampoo",
+        qtd:3,
+        preco:15
+    },
+    {
+        id:02,
+        produto:"Feijão",
+        qtd:4,
+        preco:8
+    }
+], 7, 77);
+
+console.log(sacola);
+
+sacola.addProduto({id:03, produto:"Suco", qtd:3, preco:6});
+console.log(sacola);
