@@ -43,15 +43,15 @@ let conta = new Conta(1300, 5000, 1);
 console.log(conta);
 
 
-conta.deposito(5000);
+conta.deposito(15000);
 console.log(conta);
 
 
-conta.saque(3000);
+conta.saque(2000);
 console.log(conta);
 
 
-conta.transferenciaCC(3000);
+conta.transferenciaCC(30000);
 console.log(conta);
 
 
